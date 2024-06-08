@@ -4,10 +4,10 @@ version = "0.7.1"
 authors = ["Mitchell Berry <foss@mitchellberry.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
-repository = "https://github.com/Argyle-Software/kyber"
+repository = "https://github.com/sentclose/kyber"
 documentation = "https://docs.rs/crate/pqc_kyber/"
 categories = ["algorithms", "cryptography", "wasm", "no-std"]
-description = "A rust implementation of the post-quantum Kyber KEM algorithm"
+description = "A rust implementation of the post-quantum Kyber KEM algorithm, with a fix for pqc_kyber KyberSlash"
 keywords = ["kyber", "kem", "key-exchange", "kex", "post-quantum"]
 readme = "readme.md"
 
