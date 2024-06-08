@@ -140,9 +140,6 @@ use reference::*;
 #[cfg(feature = "hazmat")]
 pub use reference::indcpa;
 
-#[cfg(feature = "wasm")]
-mod wasm;
-
 mod api;
 mod error;
 mod kem;

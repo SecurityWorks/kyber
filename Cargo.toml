@@ -1,5 +1,5 @@
 [package]
-name = "pqc_kyber"
+name = "pqc_kyber_edit"
 version = "0.7.1"
 authors = ["Mitchell Berry <foss@mitchellberry.com>"]
 edition = "2018"
@@ -13,20 +13,12 @@ readme = "readme.md"
 
 [dependencies]
 rand_core = { version = "0.6.4",  default-features = false }
-wasm-bindgen = { version = "0.2.87", optional = true }
 sha2 = { version = "0.10.7", optional = true , default-features = false }
-getrandom = {version = "0.2.10", features = ["js"], optional = true }
 zeroize = { version = "1.6.0", features = ["derive"], optional = true }
 aes = { version = "0.8.3", optional = true }
 ctr = { version = "0.9.2", optional = true }
 # Optional dev-deps, see https://github.com/rust-lang/cargo/issues/1596
-criterion = { version = "0.4.0", features = ["html_reports"], optional = true } 
-
-[dependencies.rand]
-version = "0.8.5"
-default-features = false
-features = ["getrandom"]
-optional = true
+criterion = { version = "0.4.0", features = ["html_reports"], optional = true }
 
 [dev-dependencies]
 rand = "0.8.5"
@@ -34,9 +26,6 @@ rand = "0.8.5"
 [build-dependencies]
 cc = {version = "1.0.73", optional = true }
 nasm-rs = {version = "0.2.4", optional = true }
-
-[lib]
-crate-type = ["cdylib", "rlib"]
 
 [[bench]]
 name = "api"
@@ -66,9 +55,6 @@ hazmat = []
 # Use avx2 intrinsics on x86 architectures
 # Wont compile if the platform doesn't support it
 avx2 = ["cc"]
-
-# For compiling to wasm targets 
-wasm = ["wasm-bindgen", "getrandom", "rand"]
 
 # Uses Netwide Assembler avx2 code instead of GAS, this offers increased 
 # portability, you will need a nasm compiler installed. 
